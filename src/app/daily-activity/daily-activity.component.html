@@ -1,0 +1,75 @@
+<div class="container py-5"
+    style="background-image: url('assets/img/contoh.png'); background-size: cover; background-position: center;">
+    <div class="row justify-content-center">
+        <div class="col-md-8 mt-5">
+            <div class="card">
+                <div class="card-body">
+                  <form [formGroup]="dailyActivityForm" (ngSubmit)="onSubmit()" novalidate>
+                    <p>Daily Activity Log</p>
+                    <div class="row mb-3">
+                      <!-- Transportation Modes -->
+                      <div class="col-md-6 mb-4">
+                        <label for="transportationModels" class="form-label">Transportation Modes <span class="text-danger">*</span></label>
+                        <select class="form-control" id="transportationModels" formControlName="transportationModels" required>
+                          <option value="" disabled selected>Select transportation</option>
+                          <option value="public">Public Transportation</option>
+                          <option value="walk">Walk</option>
+                          <option value="bike">Bike</option>
+                          <option value="car">Car</option>
+                          <option value="motorcycle">Motorcycle</option>
+                        </select>
+                        <div *ngIf="dailyActivityForm.controls['transportationModels'].invalid && dailyActivityForm.controls['transportationModels'].touched" class="invalid-feedback">
+                          Transportation method is required.
+                        </div>
+                      </div>
+                
+                      <!-- Energy Sources -->
+                      <div class="col-md-6 mb-4">
+                        <label for="energyUsage" class="form-label">Energy Sources <span class="text-danger">*</span></label>
+                        <select class="form-control" id="energyUsage" formControlName="energyUsage" required>
+                          <option value="" disabled selected>Select energy sources</option>
+                          <option value="electricity">Electricity</option>
+                          <option value="solar">Solar</option>
+                          <option value="wind">Wind</option>
+                          <option value="hydropower">Hydropower</option>
+                        </select>
+                        <div *ngIf="dailyActivityForm.controls['energyUsage'].invalid && dailyActivityForm.controls['energyUsage'].touched" class="invalid-feedback">
+                          Energy source is required.
+                        </div>
+                      </div>
+                
+                      <!-- Dietary Preference -->
+                      <div class="col-md-6 mb-4">
+                        <label for="meals" class="form-label">Dietary Preference <span class="text-danger">*</span></label>
+                        <select class="form-control" id="meals" formControlName="meals" required>
+                          <option value="" disabled selected>Select dietary preference</option>
+                          <option value="vegetarian">Vegetarian</option>
+                          <option value="vegan">Vegan</option>
+                          <option value="gluten_free">Gluten-Free</option>
+                          <option value="high_calorie">High-Calorie Diet</option>
+                        </select>
+                        <div *ngIf="dailyActivityForm.controls['meals'].invalid && dailyActivityForm.controls['meals'].touched" class="invalid-feedback">
+                          Dietary preference is required.
+                        </div>
+                      </div>
+                
+                      <!-- Date -->
+                      <div class="col-md-6 mb-4">
+                        <label for="date" class="form-label">Select Date <span class="text-danger">*</span></label>
+                        <input type="date" class="form-control" id="date" formControlName="date" required>
+                        <div *ngIf="dailyActivityForm.controls['date'].invalid && dailyActivityForm.controls['date'].touched" class="invalid-feedback">
+                          Date selection is required.
+                        </div>
+                      </div>
+                
+                      <!-- Submit Button -->
+                      <div class="d-grid gap-2 mt-3">
+                        <button type="submit" class="btn custom-btn">Submit</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

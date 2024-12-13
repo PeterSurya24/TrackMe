@@ -1,0 +1,129 @@
+body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+}
+
+.card {
+    padding: 30px 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: none !important;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.7); /* Membuat card transparan */
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.8); /* Membuat form transparan */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.blue-text {
+    color: #00BCD4
+}
+
+.form-control-label {
+    margin-bottom: 0
+}
+
+input,
+textarea,
+button {
+    padding: 8px 15px;
+    border-radius: 5px !important;
+    margin: 5px 0px;
+    box-sizing: border-box;
+    border: 1px solid #4CAF50;
+    font-size: 18px !important;
+    font-weight: 300
+}
+.custom-error {
+    color: red;
+    font-weight: bold; /* Opsional, untuk penekanan */
+  }
+  
+
+input:focus,
+textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #00BCD4;
+    outline-width: 0;
+    font-weight: 400
+}
+
+.btn-block {
+    text-transform: uppercase;
+    font-size: 15px !important;
+    font-weight: 400;
+    height: 43px;
+    cursor: pointer
+}
+
+.btn-block:hover {
+    color: #c0cac1 !important
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+.custom-btn {
+    background-color: #4CAF50 !important; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 16px; 
+    margin: 4px 2px;
+    cursor: pointer; 
+    border-radius: 4px; 
+    transition: background-color 0.3s; 
+  }
+
+  .custom-btn:hover {
+    background-color: #438b46 !important; 
+}
+
+.custom-btn:focus {
+    box-shadow: none !important; 
+    outline: none !important; 
+}
+
+form p {
+    font-size: 2rem; /* Ukuran font yang cukup besar */
+    font-weight: bold; /* Menonjolkan teks */
+    text-transform: uppercase; /* Mengubah teks menjadi huruf kapital */
+    color: #438b46; /* Warna biru modern */
+    text-align: center; /* Memusatkan teks */
+    margin-bottom: 10px; /* Memberi jarak bawah */
+    letter-spacing: 2px; /* Menambahkan spasi antar huruf */
+   
+  }
+
+
+
+  /* Responsif untuk layar kecil (mobile) */
+  @media (max-width: 768px) {
+    .container {
+      background-size: cover;
+      background-position: center;
+      min-height: 80vh; /* Menyesuaikan tinggi untuk perangkat kecil */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      background-size: cover;  /* Memastikan gambar menutupi seluruh kontainer pada perangkat mobile */
+      min-height: 80vh; /* Menurunkan tinggi untuk layar yang lebih kecil */
+    }
+  }

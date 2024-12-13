@@ -1,0 +1,27 @@
+<div class="container py-5"
+  style="background-image: url('assets/img/contoh.png'); background-size: cover; background-position: center;">
+  <div class="row justify-content-center">
+    <div class="col-md-6 mt-5">
+      <div class="card">
+        <div class="card-body">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <p>Login</p>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" formControlName="email" class="form-control" />
+            </div>
+            <div class="form-group mt-3">
+              <label for="password">Password</label>
+              <input type="password" id="password" formControlName="password" class="form-control" />
+            </div>
+            <div class="d-grid gap-2 mt-3">
+            <button type="submit" [disabled]="loading" class="btn custom-btn">
+              Login
+            </button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

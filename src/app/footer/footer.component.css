@@ -1,0 +1,31 @@
+/* Custom Styles */
+
+.bg-custom {
+    background-color: #4CAF50; /* Warna biru tua yang Anda inginkan */
+  }
+  
+  footer {
+      font-size: 14px;
+    }
+    
+    .footer-link a {
+      text-decoration: none;
+      margin-right: 15px;
+    }
+    
+    .footer-link a:hover {
+      color: #ccc;
+    }
+    
+    hr {
+      border-top: 1px solid rgba(18, 31, 125, 0.1);
+    }
+    
+    .text-center {
+      font-size: 12px;
+    }
+  
+  
+    
+    
+    

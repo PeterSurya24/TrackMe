@@ -1,0 +1,80 @@
+/* Card styling */
+.card {
+    padding: 30px 40px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    border: none !important;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.7); /* Membuat card transparan */
+}
+
+.alert.alert-warning {
+  margin-top: 170px;
+}
+
+/* Chart container styling */
+.chart-container {
+    width: 100%;
+    max-width: 600px; /* Max width of the chart */
+    margin: 0 auto;   /* Center the chart horizontally */
+    display: block;   /* Ensure canvas is treated as a block element */
+}
+
+#myChart {
+    height: 400px; /* Set a fixed height */
+    width: 100%;   /* Make the width responsive */
+}
+
+/* Card body padding */
+.card-body {
+    padding: 20px;
+}
+
+/* Margin for the bottom of the card */
+.card {
+    margin-bottom: 20px;
+}
+
+/* Top margin for elements with class mt-5 */
+.mt-5 {
+    margin-top: 50px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .card {
+        padding: 20px 30px;  /* Reduce padding for medium screens */
+    }
+
+    .alert.alert-warning {
+        margin-top: 120px;  /* Adjust margin for medium screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .card {
+        padding: 15px;  /* Reduce padding for small screens */
+        margin-top: 20px;  /* Reduce top margin for smaller screens */
+        margin-bottom: 30px;  /* Reduce bottom margin for smaller screens */
+    }
+    
+
+    /* Chart container adjusts to full width */
+    .chart-container {
+        max-width: 100%; 
+    }
+
+    #myChart {
+        height: 300px;  /* Reduce chart height for small screens */
+    }
+
+    /* Adjust padding inside card */
+    .card-body {
+        padding: 10px;  /* Reduce padding inside card for small screens */
+    }
+
+    /* Adjust margin for warning alert */
+    .alert.alert-warning {
+        margin-top: 130px;  /* Adjust margin for warning message on smaller screens */
+    }
+}
