@@ -1,0 +1,79 @@
+<html>
+ <head>
+
+ </head>
+ <body>
+    <br><br><br><br>
+    <!-- history-track.component.html -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Historical Carbon Footprint Tracker</h2>
+    <div class="mb-4 content">
+        <div class="form-row align-items-end">
+            <div class="col-md-4">
+                <label for="startDate">Start Date:</label>
+                <input id="startDate" type="date" class="form-control" [(ngModel)]="startDate" required />
+            </div>
+            <div class="col-md-4">
+                <label for="endDate">End Date:</label>
+                <input id="endDate" type="date" class="form-control" [(ngModel)]="endDate" required />
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary mt-3" (click)="generateChart()">Enter</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="chart" id="chartContainer">
+        <canvas id="carbonFootprintChart"></canvas>
+    </div>
+    
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Chart Data Descriptions</h5>
+            <div *ngFor="let data of chartDescriptions">
+                <p><strong>Date:</strong> {{ data.date }}</p>
+                <p><strong>Carbon Footprint:</strong> {{ data.value }} kg CO2</p>
+                <p><strong>Description:</strong> {{ data.description }}</p>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <h5>Set Goal</h5>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="target">Target</label>
+                <select class="form-control" id="target" [(ngModel)]="selectedTarget">
+                    <option selected>Choose...</option>
+                    <option value="5">5kg CO2</option>
+                    <option value="10">10kg CO2</option>
+                    <option value="15">15kg CO2</option>
+                    <option value="20">20kg CO2</option>
+                    <option value="25">25kg CO2</option>
+                    <option value="30">30kg CO2</option>
+                    <option value="35">35kg CO2</option>
+                    <option value="40">40kg CO2</option>
+                    <option value="45">45kg CO2</option>
+                    <option value="50">50kg CO2</option>
+                    <option value="55">55kg CO2</option>
+                </select>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="category">Category</label>
+                <select class="form-control" id="category" [(ngModel)]="selectedCategory">
+                    <option selected>Choose...</option>
+                    <option value="Dietary">Dietary</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="Energy Usage">Energy Usage</option>
+                </select>
+            </div>
+        </div>
+        <button class="btn btn-primary" (click)="setGoal()">Set Goal</button>
+    </div>
+    <div *ngIf="goalSet" class="alert alert-success mt-4" role="alert">
+        Goals have been set successfully!
+    </div>
+</div>
+ </body>
+</html>
